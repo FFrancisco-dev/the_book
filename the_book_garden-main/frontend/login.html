@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='/favicon.ico') }}">
+    <link href="{{ url_for('static', path='/login.css') }}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/14b02c289f.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', path='/script-nav.js') }}"></script>
+    <script src="{{ url_for('static', path='/login.js') }}"></script>
+    <title>the book garden</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">The book garden  </div>
+        <input type="search" placeholder="Buscar">
+        <input type="button" value="buscar" class="buscar">
+        <button type="button" class="login_i , modo" onclick="regresar()">Inicio</button>
+        <button type="button" class="modo" onclick=" save_user()"><i class="fa-solid fa-circle-half-stroke"></i></button>
+        <button type="button" class="modo" onclick=""><i class="fa-solid fa-bars"></i></button>
+
+</nav> 
+
+    <div class="log_container" id="log_container">
+
+        <div class="singin" id="singin">
+            <img clas="background"src="{{ url_for('images', path='/fondo2.jpeg') }}" >
+
+            <form  method="post" action="/login/user" id="log">
+
+            <label for="Nombre">Nombre de usuario:<input type="text" placeholder="Nombre" name="Nombre_de_usuario" ></label>
+            <label for="Email">Contraseña:<input type="password" placeholder="Contraseña" name="Contraseña" ></label>
+            <input type="submit" placeholder="login">
+            
+        </form>
+            <button type="button" onclick=" inicioSesion()">olvide mi contraseña</button>
+            <button type="button" onclick=" crearCuenta()">crear cuenta</button>
+            
+        </div>
+
+        <div class="login" id="login">  
+            <h2>Bienvenid@</h2>
+            <img clas="background"src="{{ url_for('images', path='/bibli.jpg') }}" >
+
+            <form  method="post" action="/login/userCreate" id="users">
+
+                <label for="Nombre">Nombre de usuario:<input type="text" placeholder="Nombre" name="Nombre_de_usuario" ></label>
+                <label for="Nombre">Nombre:<input type="text" placeholder="Nombre" name="Nombre" ></label>
+                <label for="Apellido">Apellido:<input type="text" placeholder="Apellido" name="Apellido" ></label>
+                <label for="Email">Email:<input type="email" placeholder="Email" name="Email" ></label>
+                <label for="Email">Contraseña:<input type="password" placeholder="Contraseña" name="Contraseña" ></label>
+                <label for="Email">Repetir contraseña:<input type="password" placeholder="RContraseña" name="RContraseña" ></label>
+                            <input type="submit" placeholder="crear">
+
+            </form>  
+
+            <button type="button" onclick=" inicioSesion()" class="back">Ya tengo cuenta</button>
+
+        </div>
+    </div>
+    
+    <footer><a href="#">Terminos y condiciones Derechos reservados Gardenbook.com@2024 </a>
+    </footer>
+    
+</body>
+</html>

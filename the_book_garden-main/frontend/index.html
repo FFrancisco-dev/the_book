@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="{{ url_for('static', path='/login.js') }}"></script>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='/favicon.ico') }}">
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14b02c289f.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Book Garden </title>
+   
+</head>
+<body id="body_os">
+    <header>
+        <nav id="os">   
+                <div class="logo" id="logo_os">The book garden  </div>
+                <input type="search" placeholder="Buscar">
+                <input type="button" value="buscar" class="buscar">
+                <button type="button" class="modo , login" onclick="crearCuenta()">login</button>
+                <button type="button" class="modo" id="os" onclick="osc()"><i class="fa-solid fa-circle-half-stroke"></i></button>
+                <button type="button" class="modo" onclick="openMenu()"><i class="fa-solid fa-bars"></i></button>
+
+                <div class="subMenu" id="sub">
+                    <ul>
+                        <li><a itemprop="exampleOfWork" href="/works/OL45804W"> </a></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+        </nav>                    
+            <script src="{{ url_for('static', path='/api.js') }}"></script>
+            <script src="{{ url_for('static', path='/book.js') }}"></script>
+            <aside id="aside_os">
+                <h2>Categorias</h2>
+            </aside>
+            <main>
+    
+            </main>
+            
+        <footer id="footer_os"><a href="#">Terminos y condiciones Derechos reservados Gardenbook.com@2024 </a>
+        </footer>
+        <script src="{{ url_for('static', path='/script-nav.js') }}"></script>
+    </header>
+</body>
+</html>

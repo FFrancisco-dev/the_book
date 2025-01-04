@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="{{ url_for('static', path='/login.js') }}"></script>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='/favicon.ico') }}">
+    <link href="{{ url_for('static', path='/libro.css') }}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14b02c289f.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', path='/script-nav.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Book Garden </title>
+   
+</head>
+<body id="color">
+    <header>
+        <nav>   
+                <div class="logo">The book garden  </div>
+                <input type="search" placeholder="Buscar">
+                <input type="button" value="buscar" class="buscar">
+                <button type="button" class="modo , login" onclick="crearCuenta()">login</button>
+                <button type="button" class="modo" id="os" onclick="osc()"><i class="fa-solid fa-circle-half-stroke"></i></button>
+                <button type="button" class="modo" onclick="openMenu()"><i class="fa-solid fa-bars"></i></button>
+
+                <div class="subMenu" id="sub">
+                    <ul>
+                        <li><a> </a></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+        </nav>                    
+            <aside>
+                <h2>Recomendados</h2>
+            </aside>
+            <main>
+                <div id="main"></div>
+                <div id="comentario_container">
+                    <h3 class="titulo_comentario" >Comentarios<i class="fa-solid fa-comment"></i></h3>
+                    <input type="text" placeholder="Dejanos tu opinion" id="contenido_comentario">
+                    <button type="button" id="enviar_comentario"><i class="fa-regular fa-paper-plane"></i></button>
+                </div>
+            </main>
+            <script src="{{ url_for('static', path='/book.js') }}"></script>
+        <footer><a href="#">Terminos y condiciones Derechos reservados Gardenbook.com@2024 </a>
+        </footer>
+    </header>
+</body>
+</html>
